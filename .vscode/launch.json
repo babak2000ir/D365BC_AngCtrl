@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            /* "type": "al",
+            "request": "launch",
+            "name": "Your own server",
+            "server": "http://127.0.0.1",
+            "port": 7049,
+            "tenant": "",
+            "serverInstance": "DynamicsNAV110",
+            "authentication": "Windows",
+            "startupObjectId": 22 */
+
+            "type": "al",
+            "request": "launch",
+            "name": "Microsoft cloud sandbox",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": true
+
+
+        }
+    ]
+}

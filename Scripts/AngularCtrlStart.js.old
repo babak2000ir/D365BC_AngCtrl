@@ -1,0 +1,41 @@
+var ControlAddIn = document.getElementById("controlAddIn");
+
+// var AngularDiv = document.createElement("div");
+// AngularDiv.id = "AngDiv";
+// AngularDiv.className = "container mt-3";
+
+// AngularAppRoot = document.createElement("app-root")
+// AngularDiv.appendChild(AngularAppRoot);
+
+// ControlAddIn.appendChild(AngularDiv);
+
+Microsoft.Dynamics.NAV.InvokeExtensibilityMethod('ControlAddInReady',null);
+
+//load Angular scripts
+// function reloadJs(src) {
+//     src = $('script[src$="' + src + '"]').attr("src");
+//     $('script[src$="' + src + '"]').remove();
+//     $('<script/>').attr('src', src).appendTo('body');
+// }
+
+window.LoadAngularScripts = function loadScripts()
+{
+    var body= document.getElementsByTagName('body')[0];
+
+    var script1 = document.createElement('script');
+    script1.src = 'runtime.ec2944dd8b20ec099bf3.js';
+
+    var script2 = document.createElement('script');
+    script2.src = 'polyfills.c6871e56cb80756a5498.js';
+
+    var script3 = document.createElement('script');
+    script3.src = 'scripts.e84e36a0841a046b4d25.js';
+
+    var script4 = document.createElement('script');
+    script4.src = 'main.4f0ba0e14e051fc2dae5.js';
+
+    body.appendChild(script1);
+    body.appendChild(script2);
+    body.appendChild(script3);
+    body.appendChild(script4);
+}
